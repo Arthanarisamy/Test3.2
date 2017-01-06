@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CHILDS>
+    <CHILD>
+        <NAME>1280x768.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>appzillon1.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>Appzillon.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>firecontact.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>firefollow.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>firelocate.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>firevisit.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>forward3.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>speedometer.png</NAME>
+        <TYPE>IMAGE</TYPE>
+    </CHILD>
+</CHILDS>

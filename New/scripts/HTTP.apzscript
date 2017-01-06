@@ -1,0 +1,14 @@
+apz.app.callHTTPGet = function(){
+    debugger;
+    //apz.util.launchSubScreen("CustomLoader","loaderdivforchild_main_div",0);
+    apz.app.callOperation('HTTPPutService', apz.app.callbackFunction);
+};
+apz.app.callHTTPPost = function(){
+    debugger;
+    //apz.util.launchSubScreen("CustomLoader","loaderdivforchild_main_div",0);
+    apz.app.callOperation('HTTPPostService', apz.app.callbackFunction);
+}
+
+apz.app.callbackFunction = function(){
+    alert("Called Back")
+}

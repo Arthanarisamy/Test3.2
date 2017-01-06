@@ -1,0 +1,106 @@
+ apz.app.getImage = function() {
+     //alert('Hi');
+     var str = $('.flip-current')[0].innerHTML;
+     var imageid = str.substring(str.indexOf('src') + 5, str.indexOf('"></div>'));
+     var webcontainerpath = "apps/com.iexceed.demobank/app/screens/";
+     var device = ""; //apz.plugin.retrieve('PLUGIN.DEVICETYPE');
+     //var limageid = webcontainerpath + imageid;
+     if (device == "WEBCONTAINER") {
+         if (imageid == webcontainerpath + "styles/DemoBank/img/airtel.png") {
+             $('#BillerId').val('Airtel1234');
+             $('#BillerName').val('Airtel');
+         } else if (imageid == webcontainerpath + "styles/DemoBank/img/docomo.png") {
+             $('#BillerId').val('Docomo1234');
+             $('#BillerName').val('Tata Docomo');
+         } else if (imageid == webcontainerpath + "styles/DemoBank/img/idea.png") {
+             $('#BillerId').val('Idea1234');
+             $('#BillerName').val('Idea Cellular');
+         } else if (imageid == webcontainerpath + "styles/DemoBank/img/reliance.png") {
+             $('#BillerId').val('Reliance2133');
+             $('#BillerName').val('Reliance Communication');
+         } else if (imageid == webcontainerpath + "styles/DemoBank/img/vodafone.png") {
+             $('#BillerId').val('Vodafone233');
+             $('#BillerName').val('Vodafone');
+         }
+     } else {
+         if (imageid == "styles/DemoBank/img/airtel.png") {
+             $('#BillerId').val('Airtel1234');
+             $('#BillerName').val('Airtel');
+         } else if (imageid == "styles/DemoBank/img/docomo.png") {
+             $('#BillerId').val('Docomo1234');
+             $('#BillerName').val('Tata Docomo');
+         } else if (imageid == "styles/DemoBank/img/idea.png") {
+             $('#BillerId').val('Idea1234');
+             $('#BillerName').val('Idea Cellular');
+         } else if (imageid == "styles/DemoBank/img/reliance.png") {
+             $('#BillerId').val('Reliance2133');
+             $('#BillerName').val('Reliance Communication');
+         } else if (imageid == "styles/DemoBank/img/vodafone.png") {
+             $('#BillerId').val('Vodafone233');
+             $('#BillerName').val('Vodafone');
+         }
+     }
+ };
+ apz.app.onLoad_Payment = function() {
+     /*$("#BillPay__i__createBillingTransaction__TransactionnDate")
+
+        .val("2014-03-24");*/
+     try {
+         $(".flipster").flipster();
+     } catch (e) {}
+     var today = new Date();
+     var dd = today.getDate();
+     var mm = today.getMonth() + 1;
+     //January is 0!
+     var yyyy = today.getFullYear();
+     if (dd < 10) {
+         dd = '0' + dd;
+     }
+     if (mm < 10) {
+         mm = '0' + mm;
+     }
+     today = yyyy + '-' + mm + '-' + dd;
+     //apz.plugin.log(today);
+     $("#BillPay__i__createBillingTransaction__TransactionnDate").val(today);
+     $('#BillerId').val('Idea1234');
+     $('#BillerName').val('Idea Cellular');
+     try {
+         $(".flipster").flipster();
+     } catch (e) {}
+     var device = ""; //apz.plugin.retrieve('PLUGIN.DEVICETYPE');
+     if (device == "WEBCONTAINER") {
+         $('.flip-content').children().each(function() {
+             var osrc = $(this).attr("src");
+             var lpath = "apps/com.iexceed.demobank/app/screens/";
+             $(this).attr("src", lpath + osrc);
+             // console.log(lpath+osrc);
+         })
+     }
+ };
+ /*
+ apz.app.changeClass=function (){
+      $('.flip-current').change(apz.app.getImage());
+ };
+ */
+ apz.server.callServer_App = function(req, res) {
+     apz.server.callServer('BillPay_Req', 'BillPay_Res', 'Y', '', 'Y');
+ };
+ apz.app.fnGo = function() {
+     amount = $('#BillPay__i__createBillingTransaction__TransactionAmount').val();
+     var fieldVal = $('#BillPay__i__createBillingTransaction__TransactionAmount').val();
+     fieldVal = fieldVal.replace(/\,/g, '');
+     var isNotNumber = isNaN(fieldVal);
+     var numValidation = true;
+     if (isNotNumber) {
+         numValidation = false;
+     }
+     if (numValidation === true) {
+         apz.server.callServer('BillPay');
+     } else {
+         alert('Please enter the correct amount.');
+     }
+ };
+ apz.app.preUpdateResponse = function() {
+     // alert('in Preupdate Response');
+     $('#R2_main_div').removeClass('viewhidden');
+ }

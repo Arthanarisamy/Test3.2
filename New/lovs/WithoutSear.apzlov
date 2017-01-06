@@ -1,0 +1,1 @@
+{"typeclass":"LOV","name":"WithoutSear","type":"LOV","defaultlov":"N","schemaname":"LSearch","lovquery":"select APP_ID from TB_ASMI_SECURITY_PARAMETERS","jndiname":"AppzillonServerDS","lovreturnfields":[{"queryfield":"APP_ID","datatype":"STRING","filterreqd":"N","resultreqd":"N"}],"lovsession":"Y","querybydefault":"Y"}

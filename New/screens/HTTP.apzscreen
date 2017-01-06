@@ -1,0 +1,1 @@
+{"typeclass":"SCREEN","name":"HTTP","type":"SCREEN","childs":[],"screendescription":"New Screen","interfaces":[{"name":"HTTPPutService","request":"Y","response":"Y","fault":"N"},{"name":"HTTPPostService","request":"Y","response":"Y","fault":"N"}],"id":[{"devicegroup":"All","portraitlo":"LO_ALL","landscapelo":"LO_ALL"}]}

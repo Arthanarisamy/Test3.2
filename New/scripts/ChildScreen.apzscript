@@ -1,0 +1,16 @@
+
+function mySub(obj) {
+    var itemName = $(obj).find('a').text();
+    if (itemName == "Sub Screen1") {
+        apz.launchSubScreen('SubScreen1','subScreenDiv_main_div',38);
+    } else if (itemName == "Sub Screen2") {
+        apz.launchSubScreen('SubScreen2','subScreenDiv_main_div',38);
+    }else if (itemName == "Home") {
+         apz.launchScreen('MasterScreen',14);
+    }else if (itemName == "Payment") {
+         apz.launchScreen('Payment',14);
+    }else if (itemName == "HTTP") {
+         apz.launchScreen('HTTP',14);
+    }
+};
+

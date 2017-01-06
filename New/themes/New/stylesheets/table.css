@@ -1,0 +1,46 @@
+/*--dtable --*/
+.tbox{}
+.tscroller {overflow:auto}
+.tpage {font-size:14px; margin-bottom:10px }
+.srow.tpage li {vertical-align: middle; padding-left:4px; padding-right:4px}
+.tpage .pageno {width:2em; min-width:2em; font-size:inherit}
+
+.dtable{ width: 100%; font-size: 0.75em;/*12*/ line-height: 1.25em;/*15*/ border-collapse: collapse; border-spacing: 0; }
+.dtable th { margin: 0; padding: 0.4166em;/*10*/ vertical-align: top; border: 1px solid #f1f1f1; background: #fff; white-space: nowrap }
+.dtable td { margin: 0; padding: 0.4166em;/*10*/ vertical-align: middle; border: 1px solid #f1f1f1; background: #fff; white-space: nowrap }
+.dtable th { text-align: left; background: #fff2b2; }
+
+
+.dtable a, .dtable a:link, .dtable a:visited {color: #000; text-decoration: none; }
+.dtable a:hover {color: #000; text-decoration: underline}
+.dtable tr.warning td {background-color:#fbe49e}
+.dtable tr.info td {background-color:#b8d7eb}
+.dtable tr.success td {background-color:#55d2c6}
+.dtable tr.error td {background-color:#fbbcba}	
+.dtable tr.rowtotal td {font-weight:800}
+
+/* table-bordered */
+.dtable.wborder th { border-bottom: 2px solid rgba(173, 214, 242, 0.7)}
+.dtable.wborder td { border-bottom: 1px solid rgba(230, 230, 230, 0.7)}
+/* table-striped */
+.dtable.wstripes th {border-bottom: 2px solid rgba(173, 214, 242, 0.7)}
+.dtable.wstripes tr:nth-child(odd) td {background-color: #f9f9f9}
+
+/* rowlink */
+ tr.rowlink td { cursor: pointer; background-color: #BFD5FA}
+tr.rowlink td.nolink { cursor: auto}
+.dtable tr.rowlink:hover td {background-color: #dce7f2; border-top-color: #a0c2e5}
+a.rowlink {font: inherit; color: inherit; text-decoration: inherit}
+/* Zebra */
+.wstripes tbody tr:nth-child(odd) td, .wstripes tbody tr:nth-child(odd) th {background-color: #f7f7f7}
+.whover tbody tr:hover td, .whover tbody tr:hover th {background: #e5fecb; border-top-color: #b3d58f}
+.ptable tbody tr.info td {background-color: #d9edf7}
+.ptable tbody tr.error td {background-color: #f2dede}
+.ptable tbody tr.warning td {background-color: #fcf8e3}
+.ptable tbody tr.success td {background-color: #dff0d8}
+.whover tbody tr.info:hover td {background-color: #c4e3f3}
+.whover tbody tr.error:hover td {background-color: #ebcccc}
+.whover tbody tr.success:hover td { background-color: #d0e9c6}
+.whover tbody tr.warning:hover td { background-color: #faf2cc}
+
+/* TABLE END */

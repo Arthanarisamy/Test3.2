@@ -1,0 +1,1 @@
+{"typeclass":"SCREEN","name":"Payment","type":"SCREEN","childs":[],"screendescription":"New Screen","interfaces":[{"name":"HelloSoap","request":"Y","response":"Y","fault":"N"}],"id":[{"devicegroup":"All","portraitlo":"LO_All","landscapelo":"LO_All"}]}

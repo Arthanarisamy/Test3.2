@@ -1,0 +1,6 @@
+function myNext(){
+  apz.launchScreen("ChildScreen", 38);
+}
+apz.app.onLoad_MasterScreen = function(){
+    apz.data.loadJsonData("PCCM_data");
+}

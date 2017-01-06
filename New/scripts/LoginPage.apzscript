@@ -1,0 +1,56 @@
+apz.appglobal = {};
+apz.app.login = function() {
+	var userId = $('#LoginPage__o__login_input__user_id').val();
+	apz.appglobal.loginUserId = userId;
+	var password = $('#LoginPage__o__login_input__password').val();
+	if(userId === "" || password === "" || userId === undefined || password === undefined) {
+		apz.launchScreen('MasterScreen',27);
+		//apz.util.displayMessage("APZ-LOG-ERR", null);
+	} else {
+		var params = {};
+		params.userId = userId;
+		params.pwd = password;
+		params.callBack = apz.app.loginFinished;
+		//apz.plugin.setCursorBusy();
+		setTimeout(function(){
+			apz.server.login(params);
+		},0);
+		
+	}
+};
+apz.app.loginFinished = function(params) {	
+	//apz.plugin.setCursorNormal();
+	debugger;
+	if(params.status == true) {
+		var respObj = params.res.loginResponse;
+		if(respObj.status === true) {
+			if(respObj.userName === "" || respObj.userName === null || respObj.userName === undefined) {				
+				apz.appglobal.userName = apz.appglobal.loginUserId;
+			} else {
+				apz.appglobal.userName = respObj.userName;
+			}
+			//apz.app.getScreens();
+			//apz.app.getPrivilege();
+			apz.launchScreen('FileUpload',0);
+		} else if(respObj.status === false) {
+			apz.util.displayMessage("APZ-LOG-PASS-ERR", null);
+		}
+	} else if (perrorCode[0].errorCode === "APZ-SMS-EX-004") {
+        apz.util.displayMessage('APZ-SMS-CONF', apz.app.relogin);  
+	} else if(perrorCode[0].errorCode === "APZ-DM-031") {		
+		apz.util.displayMessage("APZ-LOG-PASS-EXP", null);
+		apz.util.launch('ChangePassword');
+	} else if (perrorCode[0].errorCode === "APZ-DM-013") {
+        apz.util.displayMessage('APZ-DM-013', null);        
+    }else {
+		apz.util.displayMessage("APZ-SVR-ERR", null);
+	}	
+};
+apz.app.relogin = function (pparam) {
+    if (pparam) {
+        var userId = $('#LoginPage__o__login_input__user_id').val();
+       	var password = $('#LoginPage__o__login_input__password').val();
+       	//apz.plugin.setCursorBusy();
+        apz.server.reLogin(userId, password, apz.app.loginFinished);
+    }
+};

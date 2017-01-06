@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CHILDS>
+    <CHILD>
+        <NAME>Common</NAME>
+        <TYPE>SCRIPT</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>MasterScreen</NAME>
+        <TYPE>SCRIPT</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>SubScreen1</NAME>
+        <TYPE>SCRIPT</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>SubScreen2</NAME>
+        <TYPE>SCRIPT</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>ChildScreen</NAME>
+        <TYPE>SCRIPT</TYPE>
+    </CHILD>
+</CHILDS>

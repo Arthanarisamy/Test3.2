@@ -1,0 +1,62 @@
+.row_quicklinks{margin:20px 1% 20px 1%!important; width:98%; }
+.row_quicklinks p{margin:4px 0 0 0; display:block; font-size:12px; color:#000000;}
+.row_quicklinks .alist > li{background:transparent; border:0;}
+.row_quicklinks .alist > li .srow{margin:0 0 0 .5%;}
+.row_quicklinks .alist > li .srow span{background:#e6bcbd;}
+.row_quicklinks .alist > li .srow span{margin:0 1.5% 0 1.5%; display: inline-block; border-radius: 4px;
+padding:16px 0 16px 0;}
+header { background:transparent !important;}
+.tleft {text-align: left;}
+.shownone {display:none !important;}
+#grid_column_1_cbox_title > h4 {
+    color: rgb(83, 103, 110);
+}
+.row-sep {
+    padding-bottom:15px;
+    padding-right:15px;
+	padding-left :15px;
+	
+}
+/*--- Dash Unit / Used in Dashboard page ---*/
+.dash-unit {		
+	margin-bottom: 30px;
+	padding-bottom:10px;
+	border: 1px solid #383737;
+	background-color: #84a6aa;
+	color:white;
+	height:120px;
+	vertical-align:middle !important;
+
+}
+.dash-unit > a {		
+    text-decoration: none;
+}
+
+.dash-unit > a.txtlink, .dash-unit > a.txtlink:hover, .dash-unit > a.txtlink:visited {
+    color: #F1FAFB;
+    text-decoration: none;
+}
+
+.dash-unit:hover {
+	background-color: #4f4f4f;
+	-moz-box-shadow:    5px 3px 5px 0px #151515;
+    -webkit-box-shadow: 3px 3px 2px 0px #151515;
+    box-shadow:         3px 3px 2px 0px #151515;
+
+}
+
+.dash-unit dtitle {
+	font-size:11px;
+	text-transform:uppercase;
+	color:#ffffff;
+	margin:8px;
+	padding:0px;
+	height:inherit	
+	}
+	
+.dash-unit hr {
+  	border: 0;
+  	border-top: 1px solid #151515;
+  	border-top-style: dashed;
+	margin-top:3px;
+}

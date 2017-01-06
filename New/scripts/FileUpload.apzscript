@@ -1,0 +1,77 @@
+apz.app.upload = function() {
+	var json = {};
+	json.fieldID = "element_inputbox_2";
+	json.fieldID = "element_filebrowser_1";
+	json.callBack = apz.app.CB;
+	//json.successCallback = "fnsuccess";
+	//json.failureCallback = "fnfailure";
+	//json.fileName = "";
+	json.destination = "FileUpload" + "/" + "admin";
+	json.override = "Y";
+	apz.ns.uploadFile(json);
+};
+
+apz.app.mail = function() {
+	var json = {};
+	json.mailId = "mail_1";
+	json.id = "MAIL";
+	json.internal = "";
+	json.interfaceID = "";
+	json.recipientMailId = "ravindra.gahlot@i-exceed.com";
+	json.ccIdList = "";
+	json.subject = "Test";
+	json.body = "This is a test mail";
+	json.callBack = apz.app.CB;
+	//json.failureCallback = "fnfailure";
+	apz.ns.mail(json);
+};
+
+apz.app.download = function () {
+	var json = {};
+	json.fileName = "download.txt";
+	json.id = "DOWNLOAD";
+	json.filePath = "FileDownloadTest/" + "admin";
+	json.callBack = apz.app.CB;
+	json.base64  = "Y"; // N or y by default we set it as N
+	apz.ns.downloadFile(json);
+}
+
+apz.app.downloadFinished = function(presp) {
+	debugger;
+	alert("inside downloadFinished");
+	alert(presp);
+}
+
+apz.app.sendLogs = function(){
+	var json = {};
+	json.errorType = "E";
+	json.errorSeverity = "1";
+	json.errorMessage = "this is test log";
+	json.errorSource = "debug";
+	apz.ns.log(json);	
+};
+
+apz.app.CB = function(presp){
+	debugger;
+	alert(JSON.stringify(presp));
+	alert("inside CallBack");
+}
+
+apz.app.getUserPrefs = function() {
+	debugger;
+	var json = {};
+	json.id = "PROC_001";
+	json.callBack = apz.app.CB;
+	json.callBackObj = "";
+	apz.ns.getUserPrefs(json);
+}
+
+apz.app.setUserPrefs = function() {
+	debugger;
+	var json = {};
+	json.id = "PROC_002";
+	json.callBack = apz.app.CB;
+	json.callBackObj = "";
+	json.userPrefs = {"dateFormat":"dd-MMM-yyyy","numberMask":"MILLION","language":"en","dateTimeFormat":"dd-MMM-yyyy  hh:mm:ss","longitude":"78656788675667","lattitude":"5678798678","theme":"New","decimalSep":".","otaReqd":"N"};
+	apz.ns.setUserPrefs(json);
+}

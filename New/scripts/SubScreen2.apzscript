@@ -1,0 +1,4 @@
+appzillon.app.load_SubScreen2 = function() {
+    appzillon.util.loadJsonData('PCM_data');
+};
+

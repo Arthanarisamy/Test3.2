@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CHILDS>
+    <CHILD>
+        <NAME>CustomStyleSheet</NAME>
+        <TYPE>STYLESHEET</TYPE>
+    </CHILD>
+    <CHILD>
+        <NAME>table</NAME>
+        <TYPE>STYLESHEET</TYPE>
+    </CHILD>
+</CHILDS>

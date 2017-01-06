@@ -1,0 +1,12 @@
+//
+
+apz.app.callOperation = function(ifaceId) {
+    var param = {}
+    param.ifaceName = ifaceId;
+    param.callBack  = apz.app.callOperationCB;
+    apz.server.callServer(param);
+}
+apz.app.callOperationCB = function(param) {
+    alert("In CalloperationCB");
+    param.status;
+}
